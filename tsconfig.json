@@ -1,0 +1,11 @@
+{
+	"compilerOptions": {
+		"target": "ES5",
+		"strict": true,
+		"module": "ESNext",
+		"outDir": "build",
+		"paths": {
+			"*": ["./src/global.d.ts"]
+		},
+	}
+}

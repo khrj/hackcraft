@@ -2,6 +2,10 @@
 
 Voxel game written for sprig: https://sprig.hackclub.com/
 
+-   [Controls](#controls)
+-   [Development](#development)
+-   [Template](#template)
+
 ## Controls
 
 #### Global Controls
@@ -55,3 +59,14 @@ In most cases, you will just need to run
 ```sh
 npm run dev
 ```
+
+## Template
+
+You can use [this
+commit](https://github.com/khrj/hackcraft/tree/56243aaf0ed56be4ed689480a7603300c5419d0d)
+as a generic template to use in your own sprig project. It adds the following
+features to sprig:
+
+-   TypeScript support (via tsc)
+-   Multi-file support (via rollup)
+-   Live reload (via serve, open, nodemon and sprig's watch param)

@@ -1,6 +1,15 @@
-# Hack Craft
+<div align="center">
+    <img src="assets/thumbnail.png" width="400" height="400" alt="image of hack craft with a tree built using wood and leaves and the player standing to the right">
+    <h1>Hack Craft</h1>
+    <p>
+        <b>Voxel game written for <a href="https://sprig.hackclub.com/">sprig</a></b>
+    </p>
+    <br>
+    <br>
+    <br>
+</div>
 
-Voxel game written for sprig: https://sprig.hackclub.com/
+## Contents
 
 -   [Controls](#controls)
 -   [Development](#development)

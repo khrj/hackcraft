@@ -26,7 +26,7 @@
 #### Normal Mode
 
 -   <kbd>k</kbd> to place block (to right if on ground, below if in air)
--   <kbd>l</kbd> to mine block (first which exist in this order: right, below, left, above)
+-   <kbd>l</kbd> to mine block (first which exists in this order: right, below, left, above)
 -   <kbd>s</kbd> to enable mine mode
 -   <kbd>i</kbd> to enable inventory mode
 -   <kbd>j</kbd> to enable build mode

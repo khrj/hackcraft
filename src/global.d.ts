@@ -8,11 +8,10 @@ declare global {
 	type Tune = string & { __brand: "tune" }
 
 	type Sprite = {
-		_type: string
-		_x: number
-		_y: number
-		dx: number
-		dy: number
+		type: string
+		x: number
+		y: number
+		remove: () => Sprite
 	}
 
 	type InputKey = "w" | "a" | "s" | "d" | "i" | "j" | "k" | "l"

@@ -2,11 +2,20 @@
 	"scripts": {
 		"compile": "tsc",
 		"rollup": "rollup --config rollup.config.js",
-		"build": "npm run compile && npm run rollup"
+		"serve": "serve . --cors",
+		"open": "open-cli 'https://editor.sprig.hackclub.com/?file=http://localhost:3000/build.js&run=true&hide=true&watch=1000'",
+		"watch": "nodemon -w src -x 'npm run compile && npm run rollup || exit 1' -e 'js,mjs,json,ts'",
+		"dev": "npm run serve & npm run open & npm run watch"
 	},
 	"type": "module",
 	"devDependencies": {
+		"@rollup/plugin-commonjs": "^24.0.0",
+		"@rollup/plugin-node-resolve": "^15.0.1",
+		"nodemon": "^2.0.20",
+		"open-cli": "^7.1.0",
+		"prettier": "^2.8.1",
 		"rollup": "^3.7.4",
+		"serve": "^14.1.2",
 		"typescript": "^4.9.4"
 	}
 }

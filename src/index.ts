@@ -10,7 +10,7 @@
  * ===========
  * 
  * k to place block (to right if on ground, below if in air)
- * l to mine block (first which exist in this order: right, below, left, above)
+ * l to mine block (first which exists in this order: right, below, left, above)
  * 
  * s to enable mine mode
  * i to enable inventory mode

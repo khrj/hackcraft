@@ -16,8 +16,6 @@ import {
 const makeSelectedBitmap = (originalBmp: Bitmap): Bitmap => {
 	let lines = originalBmp.trim().split("\n")
 
-	console.log(lines)
-
 	const horizontalHighlight = "6666666666666666"
 
 	lines[0] = horizontalHighlight
@@ -224,7 +222,5 @@ const verbatim = Object.entries(bitmapsMap)
 const selected: [Key, Bitmap][] = verbatim.flatMap(([key, bmp]) =>
 	key in selectedKeys ? [[selectedKeys[key], makeSelectedBitmap(bmp)]] : []
 )
-
-console.log(typeof selected)
 
 export const bitmaps: [Key, Bitmap][] = [...verbatim, ...selected]

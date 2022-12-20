@@ -47,9 +47,9 @@ export class Blocks {
 	static existsBlock(player: Player, direction: Direction) {
 		const { x, y } = player.bottomSprite
 
-		if (direction === Direction.Right) return getTile(x + 1, y).length === 0
-		else if (direction === Direction.Below) return getTile(x, y + 1).length === 0
-		else if (direction === Direction.Above) return getTile(x, y - 2).length === 0
-		else if (direction === Direction.Left) return getTile(x - 1, y).length === 0
+		if (direction === Direction.Right) return getTile(x + 1, y).length !== 0
+		else if (direction === Direction.Below) return getTile(x, y + 1).length !== 0
+		else if (direction === Direction.Above) return getTile(x, y - 2).length !== 0
+		else if (direction === Direction.Left) return getTile(x - 1, y).length !== 0
 	}
 }

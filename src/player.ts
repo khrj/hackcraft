@@ -87,10 +87,7 @@ export class Player {
 
 		let result = false
 
-		if (bottomOriginalX + 1 === this.bottomSprite.x && topOriginalX + 1 === this.topSprite.x) {
-			console.log("Right empty")
-			result = true
-		}
+		if (bottomOriginalX + 1 === this.bottomSprite.x && topOriginalX + 1 === this.topSprite.x) result = true
 
 		this.bottomSprite.x = bottomOriginalX
 		this.topSprite.x = topOriginalX
@@ -107,10 +104,7 @@ export class Player {
 
 		let result = false
 
-		if (bottomOriginalX - 1 === this.bottomSprite.x && topOriginalX - 1 === this.topSprite.x) {
-			console.log("Left empty")
-			result = true
-		}
+		if (bottomOriginalX - 1 === this.bottomSprite.x && topOriginalX - 1 === this.topSprite.x) result = true
 
 		this.bottomSprite.x = bottomOriginalX
 		this.topSprite.x = topOriginalX

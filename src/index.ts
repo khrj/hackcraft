@@ -5,6 +5,7 @@
  * a to move left
  * d to move right
  * w to jump
+ * hold s to clear map
  * 
  * Normal Mode
  * ===========

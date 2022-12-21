@@ -22,6 +22,7 @@
 -   <kbd>a</kbd> to move left
 -   <kbd>d</kbd> to move right
 -   <kbd>w</kbd> to jump
+-   Hold <kbd>s</kbd> to clear map
 
 #### Normal Mode
 

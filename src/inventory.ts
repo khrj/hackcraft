@@ -13,6 +13,7 @@ export const selectedKeys: Record<Key, Key> = {
 }
 
 const slotDefaults = [dirt, stone, plank, sand, log, leaves, white_wool, red_wool, black_wool]
+const pos = { x: 5, y: 0 }
 
 export class Inventory {
 	selection: number = 0
@@ -37,13 +38,21 @@ export class Inventory {
 		}
 	}
 
+	rerender() {
+		for (let i = 0; i < 9; i++) {
+			this.unhighlight(i)
+		}
+
+		this.highlight(this.selection)
+	}
+
 	private highlight(slot: number) {
-		clearTile(slot + 2, 0)
-		addSprite(slot + 2, 0, selectedKeys[slotDefaults[slot]])
+		clearTile(slot + pos.x, pos.y)
+		addSprite(slot + pos.x, pos.y, selectedKeys[slotDefaults[slot]])
 	}
 
 	private unhighlight(slot: number) {
-		clearTile(slot + 2, 0)
-		addSprite(slot + 2, 0, slotDefaults[slot])
+		clearTile(slot + pos.x, pos.y)
+		addSprite(slot + pos.x, pos.y, slotDefaults[slot])
 	}
 }

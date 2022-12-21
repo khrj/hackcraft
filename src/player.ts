@@ -111,4 +111,11 @@ export class Player {
 
 		return result
 	}
+
+	spawn() {
+		addSprite(1, height() - 1, this.bottom)
+		addSprite(1, height() - 2, this.top)
+		this.bottomSprite = getFirst(this.bottom)
+		this.topSprite = getFirst(this.top)
+	}
 }

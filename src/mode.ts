@@ -43,9 +43,35 @@ export class ModeController {
 			else if (this.mode === Mode.Inventory) inventory.next()
 		})
 
+		let last = Date.now()
+		let tickCount = 0
+		let immune = false
 		onInput("s", () => {
-			if (this.mode === Mode.Normal) this.setMode(Mode.Mine)
-			else this.setMode(Mode.Normal)
+			let now = Date.now()
+
+			if (now - last < 100) {
+				tickCount++
+				if (tickCount >= 50 && !immune) {
+					immune = true
+					tickCount = 0
+					setTimeout(() => (immune = false), 1000)
+
+					// Clear map
+					for (let x = 0; x < width(); x++) {
+						for (let y = 0; y < height(); y++) {
+							clearTile(x, y)
+						}
+					}
+
+					inventory.rerender()
+					player.spawn()
+				}
+			} else {
+				if (this.mode === Mode.Normal) this.setMode(Mode.Mine)
+				else this.setMode(Mode.Normal)
+			}
+
+			last = now
 		})
 
 		onInput("i", () => {

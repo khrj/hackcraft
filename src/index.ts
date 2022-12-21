@@ -53,7 +53,7 @@ setMap(currentLevel)
 
 // Player
 const player = new Player(playerBottom, playerTop)
-player.setupGravity()
+player.setupGravityAndAttachFallback()
 
 // Inventory
 const inventory = new Inventory()

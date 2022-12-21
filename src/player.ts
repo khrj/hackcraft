@@ -49,7 +49,7 @@ export class Player {
 
 	fallVelocity: number = 0
 
-	setupGravity() {
+	setupGravityAndAttachFallback() {
 		setInterval(() => {
 			if (!this.isGrounded()) {
 				this.fallVelocity += 0.2
@@ -62,6 +62,14 @@ export class Player {
 			const drop = Math.floor(this.fallVelocity)
 			this.fall(drop)
 		}, 100)
+
+		// Recover from detachment
+		setInterval(() => {
+			if (this.topSprite.y !== this.bottomSprite.y - 1 || this.topSprite.x !== this.bottomSprite.x) {
+				this.topSprite.y = this.bottomSprite.y - 1
+				this.topSprite.x = this.bottomSprite.x
+			}
+		}, 1000)
 	}
 
 	isGrounded() {

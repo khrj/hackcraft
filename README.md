@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="assets/thumbnail.png" width="400" height="400" alt="image of hack craft with a tree built using wood and leaves and the player standing to the right">
+    <img src="assets/thumbnail.png" width="503" height="400" alt="image of hack craft with a tree built using wood and leaves and the player standing to the right">
     <h1>Hack Craft</h1>
     <p>
         <b>Voxel game written for <a href="https://sprig.hackclub.com/">sprig</a></b>
